@@ -21,6 +21,7 @@ const userAccount = document.getElementById("userAccount")
 const courseSec = document.getElementById("courseSection")
 const promosec = document.getElementById("promoSec")
 const clearfilter = document.getElementById("clearFilter")
+const searchInput = document.getElementById("searchInput")
 
 
 const ratingInputs = document.querySelectorAll('input[name="rating"]');
@@ -344,6 +345,8 @@ function applyFilters() {
     const selectedSoftware = getCheckedValues(softwareCheckboxes, cb => cb.dataset.value);
     const selectedLanguages = getCheckedValues(languageCheckboxes, cb => cb.dataset.value);
 
+    const searchText = searchInput.value.trim().toLowerCase()
+
     const filtered = courses.filter(course => {
         if (course.rating < minRating) return false;
 
@@ -357,6 +360,8 @@ function applyFilters() {
 
         if (selectedLanguages.length > 0 && !selectedLanguages.includes(course.language)) return false;
 
+        if (searchText && !course.title.toLowerCase().includes(searchText)) return false
+
         return true;
     });
 
@@ -367,5 +372,6 @@ function applyFilters() {
 [ratingInputs, levelInputs, durationCheckboxes, categoryCheckboxes, softwareCheckboxes, languageCheckboxes].forEach(group => {
     group.forEach(el => el.addEventListener('change', applyFilters));
 });
+searchInput.addEventListener('input', applyFilters);
 
 

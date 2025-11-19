@@ -323,7 +323,8 @@ body {
 
 .searchList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, 350px);
+    justify-content: start;
     gap: 20px;
 }
 
@@ -382,7 +383,7 @@ body {
     position: relative; // ::before overlay uchun
     background: url('./assets/rasm.png') center/cover no-repeat;
     color: white;
-    min-height: 90vh;
+    min-height: 93vh;
     display: flex;
     justify-content: center;
     align-items: center;
