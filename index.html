@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <img src="./assets/navrasm.png" alt="MyCourse">
+                    <span>MyCourse.io</span>
+                </div>
+                <form class="search-form">
+                    <input type="text" placeholder="Search for course...">
+                    <button id="searchBtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div id="logout" class="user-actions">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a id="logIn" class="login">Login</a>
+                    <a id="logIn" href="#" class="btn-signup">Sign Up</a>
+                </div>
+                <div id="loginAvatar" class="user-actions">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="avatar-box">
+
+                        <i id="userAccount" class="fa-solid fa-user"></i>
+
+                        <div id="dropdown" class="dropdown-menu">
+                            <ul>
+                                <li>Jonathan Doe</li>
+                                <li>My Courses</li>
+                                <li>My Cart</li>
+                                <li>Wishlist</li>
+                                <li>Notifications</li>
+                                <li>Account Setting</li>
+                                <li id="logoutBtn" class="logout">Log out</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile-toggle">☰</div>
+            </div>
+        </div>
+    </header>
+    <!-- HERO SECTION -->
+    <section id="heroSec" class="hero section" style="background-image: url('./assets/rasm.png');">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Learn something new every day</h1>
+                <p>Become professionals and ready to join the world.</p>
+
+            </div>
+            <div class="searchPanel">
+                <div class="title">
+                    What do you want to learn
+                </div>
+                <div class="inputs">
+                    <input type="text" placeholder="Find courses, skills, software, etc" />
+                    <input type="text" placeholder="Categories" />
+                    <input type="text" placeholder="Topic" />
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- browse -->
+    <section id="courseSection" class="courses container ">
+        <div id="topFilter" class="courses__top">
+            <h3 class="courses__heading">Browse Our Top Courses</h3>
+            <ul class="courses__tabs" id="courseTabs">
+                <li><a href="#" class="active">Design</a></li>
+                <li><a href="#">Developer</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">Photography</a></li>
+            </ul>
+        </div>
+        <div id="oldcards" class="courses__grid" id="coursesContainer">
+            <article class="course-card">
+                <div class="course-card__badges">
+                    <span class="badge badge--bestseller">Best Seller</span>
+                    <span class="badge badge--discount">20% OFF</span>
+                </div>
+                <img src="./assets/card1.png" alt="Course" class="course-card__img">
+                <div class="course-card__body">
+                    <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                    <p class="course-card__author">
+                        <i class="fa-solid fa-user"></i> Kitani Studio
+                    </p>
+                    <div class="course-card__rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <span>(1,240)</span>
+                    </div>
+                    <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                </div>
+            </article>
+            <article class="course-card">
+                <div class="course-card__badges">
+                    <span class="badge badge--bestseller">Best Seller</span>
+                    <span class="badge badge--discount">20% OFF</span>
+                </div>
+                <img src="./assets/card2.png" alt="Course" class="course-card__img">
+                <div class="course-card__body">
+                    <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                    <p class="course-card__author">
+                        <i class="fa-solid fa-user"></i> Kitani Studio
+                    </p>
+                    <div class="course-card__rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <span>(1,240)</span>
+                    </div>
+                    <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                </div>
+            </article>
+            <article class="course-card">
+                <div class="course-card__badges">
+                    <span class="badge badge--bestseller">Best Seller</span>
+                    <span class="badge badge--discount">20% OFF</span>
+                </div>
+                <img src="./assets/card3.png" alt="Course" class="course-card__img">
+                <div class="course-card__body">
+                    <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                    <p class="course-card__author">
+                        <i class="fa-solid fa-user"></i> Kitani Studio
+                    </p>
+                    <div class="course-card__rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <span>(1,240)</span>
+                    </div>
+                    <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                </div>
+            </article>
+            <article class="course-card">
+                <div class="course-card__badges">
+                    <span class="badge badge--bestseller">Best Seller</span>
+                    <span class="badge badge--discount">20% OFF</span>
+                </div>
+                <img src="./assets/card4.png" alt="Course" class="course-card__img">
+                <div class="course-card__body">
+                    <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                    <p class="course-card__author">
+                        <i class="fa-solid fa-user"></i> Kitani Studio
+                    </p>
+                    <div class="course-card__rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <span>(1,240)</span>
+                    </div>
+                    <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                </div>
+            </article>
+        </div>
+        <div id="filterCards">
+
+            <div id="filter-sidebar" class="filter-sidebar">
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold">Filter</h5>
+                    <a id="clearFilter" id="clearFilters">Clear</a>
+                </div>
+                <hr>
+
+                <!-- Rating -->
+                <div class="filter-group">
+                    <h6 class="fw-bold">Rating</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating" id="rating45" value="4.5">
+                        <label class="form-check-label" for="rating45">4.5 & up <small>(5.8K)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating" id="rating35" value="3.5">
+                        <label class="form-check-label" for="rating35">3.5 & up <small>(1.2K)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating" id="rating30" value="3.0">
+                        <label class="form-check-label" for="rating30">3.0 & up <small>(867)</small></label>
+                    </div>
+                </div>
+
+                <!-- Video Duration -->
+                <div class="filter-group">
+                    <h6 class="fw-bold">Video Duration</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dur0-2" data-value="0-2">
+                        <label class="form-check-label" for="dur0-2">0-2 Hours <small>(9.4K)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dur3-5" data-value="3-5">
+                        <label class="form-check-label" for="dur3-5">3-5 Hours <small>(4.1K)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dur6-12" data-value="6-12">
+                        <label class="form-check-label" for="dur6-12">6-12 Hours <small>(3.8K)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dur12plus" data-value="12plus">
+                        <label class="form-check-label" for="dur12plus">12+ Hours <small>(1K)</small></label>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="filter-group">
+                    <h6 class="fw-bold">Categories</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="catDesign" data-value="Design">
+                        <label class="form-check-label" for="catDesign">Design <small>(3.2K)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="catProgramming" data-value="Programming">
+                        <label class="form-check-label" for="catProgramming">Programming <small>(1.4K)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="catBusiness"
+                            data-value="Business & Marketing">
+                        <label class="form-check-label" for="catBusiness">Business & Marketing
+                            <small>(809)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="catFinance" data-value="Finance">
+                        <label class="form-check-label" for="catFinance">Finance <small>(548)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="catMusic" data-value="Music & Film">
+                        <label class="form-check-label" for="catMusic">Music & Film <small>(1.9K)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="catPhoto" data-value="Photo & Video">
+                        <label class="form-check-label" for="catPhoto">Photo & Video <small>(2.3K)</small></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="catWriting" data-value="Writing">
+                        <label class="form-check-label" for="catWriting">Writing <small>(753)</small></label>
+                    </div>
+                </div>
+
+                <!-- Software -->
+                <div class="filter-group">
+                    <h6 class="fw-bold">Software</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="softFigma" data-value="Figma">
+                        <label class="form-check-label" for="softFigma">Figma</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="softIllustrator"
+                            data-value="Adobe Illustrator">
+                        <label class="form-check-label" for="softIllustrator">Adobe Illustrator</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="softReact" data-value="React.js">
+                        <label class="form-check-label" for="softReact">React.js</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="softVue" data-value="Vue.js">
+                        <label class="form-check-label" for="softVue">Vue.js</label>
+                    </div>
+                </div>
+
+                <!-- Level -->
+                <div class="filter-group">
+                    <h6 class="fw-bold">Level</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="level" id="levelAll" data-value="All"
+                            checked>
+                        <label class="form-check-label" for="levelAll">All Levels</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="level" id="levelBeginner"
+                            data-value="Beginner">
+                        <label class="form-check-label" for="levelBeginner">Beginner</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="level" id="levelIntermediate"
+                            data-value="Intermediate">
+                        <label class="form-check-label" for="levelIntermediate">Intermediate</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="level" id="levelAdvanced"
+                            data-value="Advanced">
+                        <label class="form-check-label" for="levelAdvanced">Advanced</label>
+                    </div>
+                </div>
+
+                <!-- Language -->
+                <div class="filter-group">
+                    <h6 class="fw-bold">Language</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="langEnglish" data-value="English" checked>
+                        <label class="form-check-label" for="langEnglish">English</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="langSpanish" data-value="Spanish">
+                        <label class="form-check-label" for="langSpanish">Spanish</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="langFrench" data-value="French">
+                        <label class="form-check-label" for="langFrench">French</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="searchList" id="searchResults">
+
+            </div>
+        </div>
+    </section>
+    <!-- promo -->
+    <section id="promoSec" class="promo container section">
+        <div class="promo__content">
+            <h4 class="promo__title">Join Klevr now to get 35% off</h4>
+            <p class="promo__text">
+                With our responsive themes and mobile and desktop apps, enjoy a seamless experience on any
+                device.
+            </p>
+            <button class="promo__btn">Join Klevr</button>
+        </div>
+
+        <div class="promo__image-wrapper">
+            <img src="./assets/promo.png" alt="Promo banner" class="promo__image">
+        </div>
+    </section>
+    <!-- trending courses -->
+    <section id="trendingSec" class="trending section">
+        <div class="container">
+            <h3 class="courses__heading">Trending courses</h3>
+            <div class="courses-grid">
+
+                <div class="course-banner">
+                    <img src="./assets/bigcard.png" alt="">
+                    <div class="banner-info">
+                        <span class="author">Ana Kursova</span>
+                        <h2>Masterclass in Design Thinking, Innovation & Creativity</h2>
+                    </div>
+                </div>
+
+                <article id="course-card" class="course-card">
+                    <div class="course-card__badges">
+                        <span class="badge badge--bestseller">Best Seller</span>
+                        <span class="badge badge--discount">20% OFF</span>
+                    </div>
+                    <img src="./assets/card7.png" alt="Course" class="course-card__img">
+                    <div class="course-card__body">
+                        <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                        <p class="course-card__author">
+                            <i class="fa-solid fa-user"></i> Kitani Studio
+                        </p>
+                        <div class="course-card__rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                            <span>(1,240)</span>
+                        </div>
+                        <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                    </div>
+                </article>
+                <article class="course-card">
+                    <div class="course-card__badges">
+                        <span class="badge badge--bestseller">Best Seller</span>
+                        <span class="badge badge--discount">20% OFF</span>
+                    </div>
+                    <img src="./assets/card6.png" alt="Course" class="course-card__img">
+                    <div class="course-card__body">
+                        <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                        <p class="course-card__author">
+                            <i class="fa-solid fa-user"></i> Kitani Studio
+                        </p>
+                        <div class="course-card__rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                            <span>(1,240)</span>
+                        </div>
+                        <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                    </div>
+                </article>
+                <article class="course-card">
+                    <div class="course-card__badges">
+                        <span class="badge badge--bestseller">Best Seller</span>
+                        <span class="badge badge--discount">20% OFF</span>
+                    </div>
+                    <img src="./assets/card5.png" alt="Course" class="course-card__img">
+                    <div class="course-card__body">
+                        <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                        <p class="course-card__author">
+                            <i class="fa-solid fa-user"></i> Kitani Studio
+                        </p>
+                        <div class="course-card__rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                            <span>(1,240)</span>
+                        </div>
+                        <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Upcoming webinar -->
+    <section id="upcomingSec" class="courses container section">
+        <div class="courses__top">
+            <h3 class="courses__heading">Upcoming Webinar </h3>
+        </div>
+        <div class="courses__grid" id="coursesContainer">
+
+            <article class="course-card">
+                <div class="course-card__badges">
+                    <span class="badge badge--bestseller">Best Seller</span>
+                    <span class="badge badge--discount">20% OFF</span>
+                </div>
+                <img src="./assets/card1.png" alt="Course" class="course-card__img">
+                <div class="course-card__body">
+                    <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                    <p class="course-card__author">
+                        <i class="fa-solid fa-user"></i> Kitani Studio
+                    </p>
+                    <div class="course-card__rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <span>(1,240)</span>
+                    </div>
+                    <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                </div>
+            </article>
+            <article class="course-card">
+                <div class="course-card__badges">
+                    <span class="badge badge--bestseller">Best Seller</span>
+                    <span class="badge badge--discount">20% OFF</span>
+                </div>
+                <img src="./assets/card2.png" alt="Course" class="course-card__img">
+                <div class="course-card__body">
+                    <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                    <p class="course-card__author">
+                        <i class="fa-solid fa-user"></i> Kitani Studio
+                    </p>
+                    <div class="course-card__rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <span>(1,240)</span>
+                    </div>
+                    <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                </div>
+            </article>
+            <article class="course-card">
+                <div class="course-card__badges">
+                    <span class="badge badge--bestseller">Best Seller</span>
+                    <span class="badge badge--discount">20% OFF</span>
+                </div>
+                <img src="./assets/card3.png" alt="Course" class="course-card__img">
+                <div class="course-card__body">
+                    <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                    <p class="course-card__author">
+                        <i class="fa-solid fa-user"></i> Kitani Studio
+                    </p>
+                    <div class="course-card__rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <span>(1,240)</span>
+                    </div>
+                    <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                </div>
+            </article>
+            <article class="course-card">
+                <div class="course-card__badges">
+                    <span class="badge badge--bestseller">Best Seller</span>
+                    <span class="badge badge--discount">20% OFF</span>
+                </div>
+                <img src="./assets/card4.png" alt="Course" class="course-card__img">
+                <div class="course-card__body">
+                    <h6 class="course-card__title">Adobe Illustrator Scratch Course</h6>
+                    <p class="course-card__author">
+                        <i class="fa-solid fa-user"></i> Kitani Studio
+                    </p>
+                    <div class="course-card__rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <span>(1,240)</span>
+                    </div>
+                    <p class="course-card__price">$24.92 <del>$32.90</del></p>
+                </div>
+            </article>
+        </div>
+        <div></div>
+    </section>
+    <!-- get section -->
+    <section id="getSec" id="getSection" class="personal section">
+        <div class="container">
+            <div class="personal__inner">
+                <h3 class="personal__title">
+                    Get personal learning recommendations based on your needs
+                </h3>
+                <button class="personal__btn">Get started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal -->
+    <div id="loginModal" class="login-modal">
+        <div class="login-modal__dialog">
+            <div class="login-modal__content">
+
+                <!-- LEFT (photo/preview) -->
+                <div class="login-modal__left" style="background-image: url('./assets/login.png');">
+                    <div class="login-modal__left-inner">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <h5>Jane Kitani</h5>
+                        <p>Graphic Designer</p>
+                    </div>
+                </div>
+
+                <!-- RIGHT (form) -->
+                <div class="login-modal__right">
+                    <div class="login-modal__header">
+                        <div class="login-modal__brand">
+                            <div class="login-modal__brand-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <span>MyCourse.io</span>
+                        </div>
+                        <p class="login-modal__subtitle">
+                            Join us and get more benefits.
+                        </p>
+                        <button id="closeModal" class="login-modal__close">&times;</button>
+                    </div>
+
+                    <div class="login-modal__body">
+
+                        <form class="login-form">
+                            <div class="login-form__group">
+                                <div class="login-form__input-wrap">
+                                    <span class="login-form__icon"><i class="fa-solid fa-envelope"></i></span>
+                                    <input id="emailLogin" type="email" placeholder="Email Address" required>
+                                </div>
+                                <small class="login-form__error"> </small>
+                            </div>
+
+                            <div class="login-form__group">
+                                <div class="login-form__input-wrap">
+                                    <span class="login-form__icon"><i class="fa-solid fa-lock"></i></span>
+                                    <input id="passwordLogin" type="password" placeholder="Password" required>
+                                </div>
+                            </div>
+
+                            <button id="loginBtn" class="login-form__submit">Login</button>
+                        </form>
+
+                        <div class="login-modal__divider"><span>or continue with</span></div>
+
+                        <div class="login-modal__social">
+                            <button class="facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</button>
+                            <button class="apple"><i class="fa-brands fa-apple"></i> Apple</button>
+                            <button class="google"><i class="fa-brands fa-google"></i> Google</button>
+                        </div>
+
+                        <div class="login-modal__footer">
+                            Need an account? <a href="#">Sign Up</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- my account -->
+    <section id="myAccount" class="account-section">
+        <div class="container">
+            <!-- Header -->
+            <h1 class="page-title">My Account</h1>
+
+            <!-- Navigation Tabs -->
+            <nav class="account-tabs">
+                <a href="#" class="tab active">Profile</a>
+                <a href="#" class="tab">Personalisation</a>
+                <a href="#" class="tab">Account</a>
+                <a href="#" class="tab">Payment Methods</a>
+                <a href="#" class="tab">Notifications</a>
+                <a href="#" class="tab">Privacy</a>
+            </nav>
+
+            <!-- Profile Form -->
+            <div class="profile-card">
+                <!-- Avatar -->
+                <div class="avatar-wrapper">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile" class="avatar">
+                    <label class="avatar-upload">
+                        <input type="file" accept="image/*">
+                        <span class="camera-icon">📷</span>
+                    </label>
+                </div>
+
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" value="Jonathan" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" value="Doe" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Headline</label>
+                        <input type="text" placeholder="Add a professional headline" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Language</label>
+                        <select class="input-field">
+                            <option>English</option>
+                            <option>Español</option>
+                            <option>Français</option>
+                            <option>O'zbekcha</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Link</label>
+                        <input type="text" value="www.kitani.io" class="input-field">
+                    </div>
+
+                    <button type="submit" class="save-btn">Save</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+
+                <!-- 1-ustun -->
+                <div class="footer__col">
+                    <h5 class="footer__logo">MyCourse.io</h5>
+                    <p class="footer__tagline">Learn anytime, anywhere.</p>
+                </div>
+
+                <!-- 2-ustun -->
+                <div class="footer__col">
+                    <ul class="footer__list">
+                        <li><a href="#">Web Programming</a></li>
+                        <li><a href="#">Mobile Programming</a></li>
+                        <li><a href="#">Java Beginner</a></li>
+                        <li><a href="#">PHP Beginner</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3-ustun -->
+                <div class="footer__col">
+                    <ul class="footer__list">
+                        <li><a href="#">Adobe Illustrator</a></li>
+                        <li><a href="#">Adobe Photoshop</a></li>
+                        <li><a href="#">Design Logo</a></li>
+                        <li><a href="#">Video Making</a></li>
+                    </ul>
+                </div>
+
+                <!-- 4-ustun -->
+                <div class="footer__col">
+                    <ul class="footer__list">
+                        <li><a href="#">Writing Course</a></li>
+                        <li><a href="#">Photography</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+                <p>© MyCourse.io 2024. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./dist/js/app.min.js"></script>
+</body>
+
+</html>
